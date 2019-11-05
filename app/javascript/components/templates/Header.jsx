@@ -15,7 +15,7 @@ export default ({ isExpanded }) => {
         <div className="headerLinks topLinks">
           <a href="/">программа</a>
           <a href="/">контакты</a>
-          <a href="/">партнеры</a>
+          <a href="/">партнёры</a>
         </div>
         <div className="line"></div>
       </div>
@@ -24,7 +24,7 @@ export default ({ isExpanded }) => {
         <div className="headerInitial bottomInitial">west</div>
         <div className="headerLinks bottomLinks">
           <a href="/">вк</a>
-          <a href="/">иснта</a>
+          <a href="/">инста</a>
           <a href="/">фб</a>
           <a href="/">телега</a>
         </div>
