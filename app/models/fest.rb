@@ -1,0 +1,2 @@
+class Fest < ApplicationRecord
+end
