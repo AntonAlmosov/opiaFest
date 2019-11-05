@@ -1,5 +1,6 @@
 import anime from "animejs/lib/anime.es.js";
 
+
 export default (isExpanded, trigger, setTrigger) => {
   if (isExpanded) {
     setTrigger(true);
