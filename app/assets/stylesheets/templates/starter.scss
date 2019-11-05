@@ -1,0 +1,67 @@
+.starterWrapper {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .starter {
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    width: 1120px;
+
+    .berlinGarden {
+      position: absolute;
+      width: 983px;
+      height: 174.95px;
+      background-image: url(asset-path('berlinGarden.svg'));
+      left: 0;
+      top: -70px;
+      z-index: 1;
+    }
+
+    .heading {
+      display: flex;
+      flex-flow: column;
+      width: 455px;
+
+      h1 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      .divider {
+        margin-top: 5px;
+        width: 90%;
+        height: 5px;
+        background-color: black;
+      }
+
+      h2 {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 44px;
+      }
+    }
+
+    .starterImage {
+      width: 645px;
+      height: 463px;
+      background-image: url(asset-path('starterImage.png'));
+      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.17);
+    }
+
+    .starterButton {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
