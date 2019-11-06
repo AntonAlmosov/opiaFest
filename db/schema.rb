@@ -43,11 +43,12 @@ ActiveRecord::Schema.define(version: 2019_11_05_142130) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.string "day_id"
     t.string "title"
     t.string "time"
     t.string "desc"
     t.string "place"
-    t.string "type"
+    t.string "eType"
     t.string "regLink"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

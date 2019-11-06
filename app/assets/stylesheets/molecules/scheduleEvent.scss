@@ -1,0 +1,54 @@
+.scheduleEvent {
+  display: flex;
+  margin-bottom: 24px;
+  width: 100%;
+  position: relative;
+
+  .picture {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 80;
+    opacity: 0;
+    background-image: url(asset-path('starterImage.png'));
+    background-size: cover;
+  }
+
+  .field {
+    padding: 12px 10px 20px 12px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 85px;
+
+    span {
+      font-family: Montserrat;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 142.7%;
+    }
+  }
+
+  .info {
+    h2 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 142.7%;
+    }
+
+    h1 {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 142.7%;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

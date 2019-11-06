@@ -16,7 +16,13 @@
 @import 'reset';
 @import 'templates/*';
 @import 'atoms/*';
+@import 'molecules/*';
 
 body {
   overflow-x: hidden;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

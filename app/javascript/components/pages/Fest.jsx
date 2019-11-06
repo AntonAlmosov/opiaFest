@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
 import Header from "../templates/Header";
 import Starter from "../templates/Starter";
+import Schedule from "../templates/Schedule";
 
 export default () => {
   const [isExpanded, setExpand] = useState(false);
@@ -27,6 +28,7 @@ export default () => {
     <div className="festWrapper">
       <Header isExpanded={isExpanded} />
       <Starter />
+      <Schedule />
       <div className="mock"></div>
     </div>
   );
