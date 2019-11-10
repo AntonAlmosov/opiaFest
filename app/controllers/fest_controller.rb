@@ -32,10 +32,22 @@ class FestController < ApplicationController
     end
   end
 
-  def getMebmers
-    member = TeamMember.all()
+  def getMembers
+    members = TeamMember.all()
+    collection = []
+
+    members.each do |member|
+      obj = {}
+      if member.picture.attached?
+        obj = {id: member.id, name: member.name, pic: rails_blob_path(member.picture, disposition: "attachment", only_path: true), role: member.teamRole, desc: member.desc}
+      else 
+        obj = {id: member.id, name: member.name, pic: 'none', role: member.teamRole, desc: member.desc}
+      end
+      collection.push(obj)
+    end
+
     respond_to do |format|
-      format.json {render json: {status: 'ok', users: member}}
+      format.json {render json: {status: 'ok', users: collection}}
     end
   end
 
@@ -43,9 +55,31 @@ class FestController < ApplicationController
     member = TeamMember.find(params[:id])
     member[params[:type]] = params[:value]
     if member.save
-      respond_to do |format|
-        format.json {render json: {status: 'ok', users: member}}
-      end
+      render json: {status: 'ok'}
+    end
+  end
+
+  def handleMemberCreation
+    member = TeamMember.new()
+    if member.save
+      render json: {status: 'ok'}
+    end
+  end
+
+  def handleMemberUpload
+    member = TeamMember.find(params[:id])
+    member.picture = params[:image]
+       if member.save
+         render json: {status: 'ok'}
+       else
+         render json: @document.errors, status: :unprocessable_entity
+       end
+  end
+
+  def deleteMember
+    member = TeamMember.find(params[:id])
+    if member.destroy
+      render json: {status: 'ok'}
     end
   end
 
@@ -123,6 +157,7 @@ class FestController < ApplicationController
       format.json  { render :json => msg } 
     end
   end
+
   private
        def image_params
          params.permit(files: []) # permit the files parameter.

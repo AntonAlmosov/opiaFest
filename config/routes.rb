@@ -15,6 +15,11 @@ Rails.application.routes.draw do
         post :deleteEvent
         get :getDescription
         post :handleDescription
+        get :getMembers
+        post :handleMember
+        get :handleMemberCreation
+        post :handleMemberUpload
+        post :deleteMember
       end
     end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
