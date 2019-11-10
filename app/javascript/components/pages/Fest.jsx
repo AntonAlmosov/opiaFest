@@ -5,6 +5,7 @@ import Starter from '../templates/Starter'
 import Schedule from '../templates/Schedule'
 import Description from '../templates/Description'
 import Members from '../templates/Members'
+import Destination from '../templates/Destination'
 
 export default () => {
   const [isExpanded, setExpand] = useState(false)
@@ -33,6 +34,7 @@ export default () => {
       <Description />
       <Schedule />
       <Members />
+      <Destination />
       <div className="mock"></div>
     </div>
   )
