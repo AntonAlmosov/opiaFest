@@ -158,6 +158,22 @@ class FestController < ApplicationController
     end
   end
 
+  def getEmail
+    emails = Email.all
+    respond_to do |format|
+      msg = {:status => 'ok', :emails => emails}
+      format.json {render :json => msg }
+    end
+  end
+
+  def sendEmail
+    email = Email.new()
+    email.email = params[:email]
+    if email.save
+      render json: {status: 'ok'}
+    end
+  end
+
   private
        def image_params
          params.permit(files: []) # permit the files parameter.

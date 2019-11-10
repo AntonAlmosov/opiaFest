@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react";
-import ScheduleDay from "../molecules/scheduleDay";
+import React, { useState, useEffect } from 'react'
+import ScheduleDay from '../molecules/scheduleDay'
 
 export default () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
 
   useEffect(() => {
-    fetch("/fest/getData")
+    fetch('/fest/getData')
       .then(res => res.json())
       .then(res => {
-        setData(res.response);
-      });
-  }, []);
+        setData(res.response)
+      })
+  }, [])
 
-  useEffect(() => {});
+  useEffect(() => {})
 
   return (
     <div className="scheduleWrapper section">
       <h1>Программа Фестиваля</h1>
       {data.map(day => {
-        return <ScheduleDay {...day} />;
+        return <ScheduleDay {...day} key={'day' + day.id} />
       })}
     </div>
-  );
-};
+  )
+}

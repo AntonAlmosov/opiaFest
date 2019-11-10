@@ -1,0 +1,42 @@
+.partners {
+  .partnersWrapper {
+    width: 1120px;
+    margin: 72px auto 0;
+    display: flex;
+    justify-content: space-between;
+
+    .partner {
+      height: 90px;
+    }
+
+    .zil {
+      width: 127px;
+      background-image: url(asset-path('zil.png'));
+      background-size: cover;
+    }
+
+    .gi {
+      width: 139px;
+      background-image: url(asset-path('gi.png'));
+      background-size: cover;
+    }
+
+    .am {
+      width: 189px;
+      background-image: url(asset-path('am.png'));
+      background-size: cover;
+    }
+
+    .ic {
+      width: 255px;
+      background-image: url(asset-path('ic.png'));
+      background-size: cover;
+    }
+
+    .cf {
+      width: 83px;
+      background-image: url(asset-path('cf.png'));
+      background-size: cover;
+    }
+  }
+}

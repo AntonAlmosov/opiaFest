@@ -22,7 +22,7 @@ export default () => {
       <div className="cardsWrapper">
         {users.map(value => {
           return (
-            <div className="card">
+            <div className="card" key={'user' + value.id}>
               <img src={value.pic} alt="" className="avatar" />
               <div className="info">
                 <h2 className="name">{value.name}</h2>

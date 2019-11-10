@@ -6,12 +6,23 @@ export default () => {
   const [data, setData] = useState([])
   const [desc, setDesc] = useState('')
   const [users, setUsers] = useState([])
+  const [emails, setEmails] = useState([])
 
   useEffect(() => {
     fetchData()
     fetchDesc()
     fetchUsers()
+    fetchEmails()
   }, [])
+
+  let fetchEmails = () => {
+    fetch('/fest/getEmail')
+      .then(res => res.json())
+      .then(res => {
+        setEmails(res.emails)
+        return res.emails
+      })
+  }
 
   let fetchData = () => {
     fetch('/fest/getData')
@@ -377,6 +388,24 @@ export default () => {
         <div className="createUser" onClick={handleUserCreation}>
           Добавить в комманду
         </div>
+      </div>
+      <h1
+        style={{
+          width: '100%',
+          textAlign: 'center',
+          fontFamily: 'Montserrat',
+          fontSize: '36px',
+          fontWeight: 600,
+          marginTop: '100px',
+          marginBottom: '30px'
+        }}
+      >
+        Заявки обратной связи
+      </h1>
+      <div className="emails">
+        {emails.map(e => {
+          return <div>{e.email}</div>
+        })}
       </div>
     </div>
   )
