@@ -9,7 +9,7 @@ export default () => {
       targets: ".starterImage",
       skewY: ((e.clientX / window.innerWidth) * 10) / 2 + "deg",
       rotateZ: (e.clientY / window.innerHeight - 0.5) * 20 + "deg",
-      rotateY: (e.clientX / window.innerWidth - 0.5) * -100 + "deg",
+      rotateY: (e.clientX / window.innerWidth - 0.5) * 100 + "deg",
       duration: 0,
     });
     anime({

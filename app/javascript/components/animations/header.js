@@ -61,12 +61,12 @@ export default (isExpanded, trigger, setTrigger) => {
     } else {
       anime({
         targets: ".topLinks",
-        translateX: document.querySelector('.topLinks').offsetWidth * -1,
+        translateX: -(document.querySelector('.topLinks').offsetWidth) - 100,
         duration: 0,
       });
       anime({
         targets: ".bottomLinks",
-        translateX: document.querySelector('.bottomLinks').offsetWidth,
+        translateX: (document.querySelector('.bottomLinks').offsetWidth) + 100,
         duration: 0,
       });
     }

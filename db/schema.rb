@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_05_142130) do
+ActiveRecord::Schema.define(version: 2019_11_09_130153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,12 @@ ActiveRecord::Schema.define(version: 2019_11_05_142130) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "descriptions", force: :cascade do |t|
+    t.string "desc"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "day_id"
     t.string "title"
@@ -50,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_11_05_142130) do
     t.string "place"
     t.string "eType"
     t.string "regLink"
+    t.string "guest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -63,6 +70,14 @@ ActiveRecord::Schema.define(version: 2019_11_05_142130) do
   create_table "members", force: :cascade do |t|
     t.string "name"
     t.string "role"
+    t.string "desc"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "team_members", force: :cascade do |t|
+    t.string "name"
+    t.string "teamRole"
     t.string "desc"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

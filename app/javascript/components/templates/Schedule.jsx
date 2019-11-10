@@ -12,15 +12,13 @@ export default () => {
       });
   }, []);
 
-  useEffect(() => {
-    console.log(data);
-  });
+  useEffect(() => {});
 
   return (
     <div className="scheduleWrapper section">
       <h1>Программа Фестиваля</h1>
       {data.map(day => {
-        return <ScheduleDay {...day} key={day.title} />;
+        return <ScheduleDay {...day} />;
       })}
     </div>
   );

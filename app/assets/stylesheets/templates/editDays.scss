@@ -1,0 +1,218 @@
+.editDays {
+  width: 1280px;
+  margin: 100px auto;
+
+  .dayHeader {
+    display: flex;
+    justify-content: space-between;
+
+    .delete {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+
+  input {
+    outline: none;
+    border: 0;
+    font-family: 'Montserrat';
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .dayTitle {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .eventsWrapper {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .event {
+    position: relative;
+    width: calc(50% - 25px);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 530px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .captions {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 85px;
+      height: calc(100% - 40px);
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      z-index: 1;
+
+      .smart-textarea-input {
+        font-family: Montserrat;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 142.7%;
+      }
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    .info {
+      position: absolute;
+      left: 115px;
+      display: flex;
+      flex-flow: column;
+      z-index: 1;
+      width: calc(100% - 115px);
+      height: calc(100% - 40px);
+    }
+
+    input {
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .eType {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 28px;
+    }
+
+    .link {
+      margin-top: 10px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    .guest {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 28px;
+    }
+
+    .inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .inputfile+label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 320px;
+      height: 60px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      background-color: white;
+      box-sizing: border-box;
+      color: black;
+      position: absolute;
+      left: 45px;
+      bottom: 0;
+    }
+
+    .inputfile:focus+label,
+    .inputfile+label:hover {
+      background-color: rgba(0, 0, 0, 0);
+      border: 4px solid white;
+      color: white;
+    }
+
+    input {
+      color: white;
+      width: 98%;
+    }
+
+    img {
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .dimm {
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.createDay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  margin: 0 auto;
+  width: 1280px;
+  height: 100px;
+  margin-top: 100px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.createEvent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.deleteEvent {
+  position: absolute;
+  right: -20px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: black;
+  top: 0;
+}

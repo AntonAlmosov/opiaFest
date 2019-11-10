@@ -8,6 +8,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.string :place
       t.string :eType
       t.string :regLink
+      t.string :guest
 
       t.timestamps
     end

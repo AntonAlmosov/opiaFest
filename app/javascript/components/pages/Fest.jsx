@@ -3,6 +3,7 @@ import anime from "animejs/lib/anime.es.js";
 import Header from "../templates/Header";
 import Starter from "../templates/Starter";
 import Schedule from "../templates/Schedule";
+import Description from "../templates/Description";
 
 export default () => {
   const [isExpanded, setExpand] = useState(false);
@@ -28,6 +29,7 @@ export default () => {
     <div className="festWrapper">
       <Header isExpanded={isExpanded} />
       <Starter />
+      <Description />
       <Schedule />
       <div className="mock"></div>
     </div>
