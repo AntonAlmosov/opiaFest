@@ -39,9 +39,9 @@ class FestController < ApplicationController
     members.each do |member|
       obj = {}
       if member.picture.attached?
-        obj = {id: member.id, name: member.name, pic: rails_blob_path(member.picture, disposition: "attachment", only_path: true), role: member.teamRole, desc: member.desc}
+        obj = {id: member.id, name: member.name, pic: rails_blob_path(member.picture, disposition: "attachment", only_path: true), teamRole: member.teamRole, desc: member.desc}
       else 
-        obj = {id: member.id, name: member.name, pic: 'none', role: member.teamRole, desc: member.desc}
+        obj = {id: member.id, name: member.name, pic: 'none', teamRole: member.teamRole, desc: member.desc}
       end
       collection.push(obj)
     end
@@ -55,7 +55,7 @@ class FestController < ApplicationController
     member = TeamMember.find(params[:id])
     member[params[:type]] = params[:value]
     if member.save
-      render json: {status: 'ok'}
+      render json: {status: 'ok', member: member}
     end
   end
 

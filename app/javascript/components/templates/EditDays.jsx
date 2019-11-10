@@ -34,9 +34,10 @@ export default () => {
   let handleUsersForm = (value, type, id) => {
     axios
       .post('/fest/handleMember', { value: value, type: type, id: id })
-      .then(() => {
+      .then(res => {
         fetchUsers()
         setUsers(users)
+        console.log(res)
       })
   }
 
@@ -324,7 +325,7 @@ export default () => {
       >
         Пользователи
       </h1>
-      <div className="usersWrapper">
+      <div className="editUsersWrapper">
         {users.map(user => {
           return (
             <div className="userCard">

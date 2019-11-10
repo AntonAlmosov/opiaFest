@@ -1,0 +1,60 @@
+.usersWrapper {
+  width: 1120px;
+  margin: 100px auto 0;
+  flex-flow: column;
+
+  .cardsWrapper {
+    width: 1120px;
+    margin: 35px auto 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .card {
+      width: 550px;
+      height: 255px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+
+      .avatar {
+        width: 265px;
+        height: 225px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .info {
+        display: flex;
+        flex-flow: column;
+        width: 265px;
+
+        .name {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 34px;
+        }
+
+        .teamRole {
+          margin-top: 13px;
+          font-family: Montserrat;
+          font-style: italic;
+          font-weight: normal;
+          font-size: 22px;
+          line-height: 27px;
+        }
+
+        .desc {
+          margin-top: 27px;
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 22px;
+          line-height: 27px;
+        }
+      }
+    }
+  }
+}
