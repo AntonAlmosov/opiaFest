@@ -2,7 +2,7 @@ import React from 'react'
 
 export default () => {
   return (
-    <div className="partners section">
+    <div className="partners section" id="partners">
       <h1>Партнеры</h1>
       <div className="partnersWrapper">
         <a href="/" className="partner zil"></a>

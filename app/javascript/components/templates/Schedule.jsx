@@ -15,7 +15,7 @@ export default () => {
   useEffect(() => {})
 
   return (
-    <div className="scheduleWrapper section">
+    <div className="scheduleWrapper section" id="schedule">
       <h1>Программа Фестиваля</h1>
       {data.map(day => {
         return <ScheduleDay {...day} key={'day' + day.id} />
