@@ -1,30 +1,66 @@
-import React from "react";
-import anime from "animejs/lib/anime.es.js";
+import React from 'react'
+import anime from 'animejs/lib/anime.es.js'
 
 export default ({ event }) => {
-  let time = 700;
-  let expand = e => {
+  let time = 700
+
+  let handleExpand = e => {
+    if (window.innerWidth >= 1130) {
+      console.log(window.innerWidth)
+      expand(e, 490)
+    } else if (window.innerWidth <= 1129 && window.innerWidth >= 730) {
+      console.log(window.innerWidth)
+      expand(e, 348)
+    }
+  }
+  let handleReset = e => {
+    if (window.innerWidth >= 1129) {
+      console.log(window.innerWidth)
+      reset(e, 80)
+    } else if (window.innerWidth <= 1129 && window.innerWidth >= 730) {
+      reset(e, 52)
+    }
+  }
+
+  let expand = (e, h) => {
+    let target = e.target
     anime({
-      targets: e.target.closest(".scheduleEvent"),
-      height: 490,
-      easing: "easeInOutSine",
-      color: "#fff",
-      duration: time,
-    });
+      targets: e.target.closest('.scheduleEvent'),
+      height: h,
+      easing: 'easeInOutSine',
+      color: '#fff',
+      duration: time
+    })
     anime({
-      targets: e.target.closest(".scheduleEvent").querySelector(".picture"),
-      height: 490,
+      targets: e.target.closest('.scheduleEvent').querySelector('.picture'),
+      height: h,
       opacity: 1,
-      easing: "easeInOutSine",
-      duration: time,
-    });
+      easing: 'easeInOutSine',
+      duration: time
+    })
     anime({
-      targets: e.target.closest(".scheduleEvent").querySelector(".dimm"),
-      height: 490,
+      targets: e.target.closest('.scheduleEvent').querySelector('.dimm'),
+      height: h,
       opacity: 1,
-      easing: "easeInOutSine",
+      easing: 'easeInOutSine',
+      duration: time
+    })
+    anime({
+      targets: e.target.closest('.scheduleEvent'),
       duration: time,
-    });
+      delay: time / 2,
+      begin: () => {
+        let col = target
+          .closest('.scheduleEvent')
+          .querySelectorAll('.expandable')
+        col[0].classList.remove('none')
+        col[1].classList.remove('none')
+        col[2].classList.remove('none')
+        col[0].classList.add('flex')
+        col[1].classList.add('flex')
+        col[2].classList.add('flex')
+      }
+    })
     // e.target
     //   .closest(".scheduleEvent")
     //   .querySelector(".info")
@@ -41,34 +77,47 @@ export default ({ event }) => {
     //   delay: 100,
     //   duration: 500,
     // });
-  };
+  }
 
-  let reset = e => {
-    let p = e.target
-      .closest(".scheduleEvent")
-      .querySelector(".info")
-      .querySelector("p");
+  let reset = (e, h) => {
+    let target = e.target
     anime({
-      targets: e.target.closest(".scheduleEvent"),
-      height: 80,
-      easing: "easeInOutSine",
-      color: "#000000",
-      duration: time,
-    });
+      targets: e.target.closest('.scheduleEvent'),
+      height: h,
+      easing: 'easeInOutSine',
+      color: '#000000',
+      duration: time
+    })
     anime({
-      targets: e.target.closest(".scheduleEvent").querySelector(".picture"),
-      height: 80,
+      targets: e.target.closest('.scheduleEvent').querySelector('.picture'),
+      height: h,
       opacity: 0,
-      easing: "easeInOutSine",
-      duration: time,
-    });
+      easing: 'easeInOutSine',
+      duration: time
+    })
     anime({
-      targets: e.target.closest(".scheduleEvent").querySelector(".dimm"),
-      height: 80,
+      targets: e.target.closest('.scheduleEvent').querySelector('.dimm'),
+      height: h,
       opacity: 0,
-      easing: "easeInOutSine",
+      easing: 'easeInOutSine',
+      duration: time
+    })
+    anime({
+      targets: e.target.closest('.scheduleEvent'),
       duration: time,
-    });
+      delay: time / 2,
+      begin: () => {
+        let col = target
+          .closest('.scheduleEvent')
+          .querySelectorAll('.expandable')
+        col[0].classList.add('none')
+        col[1].classList.add('none')
+        col[2].classList.add('none')
+        col[0].classList.remove('flex')
+        col[1].classList.remove('flex')
+        col[2].classList.remove('flex')
+      }
+    })
     // anime({
     //   targets: e.target
     //     .closest(".scheduleEvent")
@@ -82,13 +131,13 @@ export default ({ event }) => {
     //     p.classList.add("none");
     //   },
     // });
-  };
+  }
 
   return (
     <div
       className="scheduleEvent"
-      onMouseEnter={e => expand(e)}
-      onMouseLeave={e => reset(e)}
+      onMouseEnter={e => handleExpand(e)}
+      onMouseLeave={e => handleReset(e)}
       key={event.event.id}
     >
       <div className="dimm"></div>
@@ -100,12 +149,18 @@ export default ({ event }) => {
       <div className="info">
         <h2>{event.event.eType}</h2>
         <h1>{event.event.title}</h1>
-        <h3 style={{ fontStyle: "italic" }}>{event.event.guest}</h3>
-        <p>{event.event.desc}</p>
-        <a href={event.event.regLink} target="_blank" className="button">
+        <h3 className="expandable none" style={{ fontStyle: 'italic' }}>
+          {event.event.guest}
+        </h3>
+        <p className="expandable none">{event.event.desc}</p>
+        <a
+          href={event.event.regLink}
+          target="_blank"
+          className="button expandable none"
+        >
           Регистрация
         </a>
       </div>
     </div>
-  );
-};
+  )
+}

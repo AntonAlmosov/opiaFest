@@ -6,7 +6,7 @@ export default (isExpanded, trigger, setTrigger) => {
     setTrigger(true);
     anime({
       targets: ".topInitial",
-      translateX: -(document.querySelector('.topInitial').offsetWidth),
+      translateX: -(document.querySelector('.topInitial').offsetWidth) - 100,
       easing: "easeInOutSine",
       duration: 200,
     });
@@ -19,7 +19,7 @@ export default (isExpanded, trigger, setTrigger) => {
     });
     anime({
       targets: ".bottomInitial",
-      translateX: (document.querySelector('.bottomInitial').offsetWidth),
+      translateX: (document.querySelector('.bottomInitial').offsetWidth) + 100,
       easing: "easeInOutSine",
       duration: 200,
     });
@@ -41,7 +41,7 @@ export default (isExpanded, trigger, setTrigger) => {
       });
       anime({
         targets: ".topLinks",
-        translateX: -(document.querySelector('.topLinks').offsetWidth),
+        translateX: -(document.querySelector('.topLinks').offsetWidth) - 100,
         easing: "easeInOutSine",
         duration: 500,
       });
@@ -54,7 +54,7 @@ export default (isExpanded, trigger, setTrigger) => {
       });
       anime({
         targets: ".bottomLinks",
-        translateX: (document.querySelector('.bottomLinks').offsetWidth),
+        translateX: (document.querySelector('.bottomLinks').offsetWidth) + 100,
         duration: 500,
         easing: "easeInOutSine",
       });

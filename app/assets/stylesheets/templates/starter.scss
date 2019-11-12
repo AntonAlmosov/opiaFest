@@ -1,68 +1,142 @@
-.starterWrapper {
-  display: flex;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-
-  .starter {
-    margin: 0 auto;
+@media (min-width: 1120px) {
+  .starterWrapper {
     display: flex;
-    position: relative;
-    justify-content: space-between;
     align-items: center;
-    width: 1120px;
+    width: 100vw;
+    height: 100vh;
 
-    .berlinGarden {
-      position: absolute;
-      width: 983px;
-      height: 174.95px;
-      background-image: url(asset-path('berlinGarden.svg'));
-      left: 0;
-      top: -70px;
-      z-index: 1;
-    }
-
-    .heading {
+    .starter {
+      margin: 0 auto;
       display: flex;
-      flex-flow: column;
-      width: 455px;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      width: 1120px;
 
-      h1 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 44px;
+      .berlinGarden {
+        position: absolute;
+        width: 983px;
+        height: 174.95px;
+        background-image: url(asset-path('berlinGarden.svg'));
+        left: 0;
+        top: -70px;
+        z-index: 2;
       }
 
-      .divider {
-        margin-top: 5px;
-        width: 90%;
-        height: 5px;
-        background-color: black;
+      .heading {
+        display: flex;
+        flex-flow: column;
+        width: 455px;
+
+        h1 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 44px;
+        }
+
+        .divider {
+          margin-top: 5px;
+          width: 90%;
+          height: 5px;
+          background-color: black;
+        }
+
+        h2 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 36px;
+          line-height: 44px;
+        }
       }
 
-      h2 {
-        font-family: Montserrat;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 36px;
-        line-height: 44px;
+      .starterImage {
+        width: 645px;
+        height: 463px;
+        background-image: url(asset-path('starterImage.png'));
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.17);
+        background-size: cover;
+      }
+
+      .starterButton {
+        position: absolute;
+        bottom: 0;
+        left: 0;
       }
     }
+  }
+}
 
-    .starterImage {
-      width: 645px;
-      height: 463px;
-      background-image: url(asset-path('starterImage.png'));
-      box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.17);
-      background-size: cover;
-    }
+@media (max-width: 1119px) and (min-width: 730px) {
+  .starterWrapper {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 
-    .starterButton {
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    .starter {
+      margin: 0 auto;
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+      width: 736px;
+
+      .berlinGarden {
+        position: absolute;
+        width: 610px;
+        height: 109px;
+        background-image: url(asset-path('berlinGarden.svg'));
+        background-size: cover;
+        left: 0;
+        top: -30px;
+        z-index: 2;
+      }
+
+      .heading {
+        display: flex;
+        flex-flow: column;
+        width: 315px;
+
+        h1 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+        }
+
+        .divider {
+          margin-top: 4px;
+          width: 90%;
+          height: 5px;
+          background-color: black;
+        }
+
+        h2 {
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+
+      .starterImage {
+        width: 421px;
+        height: 301px;
+        background-image: url(asset-path('starterImage.png'));
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.17);
+        background-size: cover;
+      }
+
+      .starterButton {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
     }
   }
 }

@@ -1,17 +1,39 @@
-.descriptionWrapper {
-  width: 100vw;
+@media (min-width: 1120px) {
+  .descriptionWrapper {
+    width: 100vw;
 
-  .description {
-    width: 1120px;
-    margin: 40px auto 200px;
+    .description {
+      width: 1120px;
+      margin: 40px auto 200px;
 
-    p {
-      width: 740px;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 26px;
-      line-height: 142.7%;
+      p {
+        width: 740px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 142.7%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1119px) and (min-width: 740px) {
+  .descriptionWrapper {
+    width: 100vw;
+
+    .description {
+      width: 736px;
+      margin: 80px auto 80px;
+
+      p {
+        width: 483px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 142.7%;
+      }
     }
   }
 }

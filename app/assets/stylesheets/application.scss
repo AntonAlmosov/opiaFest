@@ -19,6 +19,7 @@
 @import 'molecules/*';
 
 body {
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -29,4 +30,8 @@ body {
 
 .none {
   display: none;
+}
+
+.flex {
+  display: flex;
 }
