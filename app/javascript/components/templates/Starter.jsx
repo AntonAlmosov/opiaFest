@@ -4,35 +4,6 @@ import ArchonButton from '../atoms/ArchonButton'
 import anime from 'animejs/lib/anime.es.js'
 
 export default () => {
-  let axel = () => {
-    if (
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
-    ) {
-      let accelerometer = new Accelerometer({ frequency: 60 })
-      accelerometer.addEventListener('reading', e => {
-        canime({
-          targets: '.starterImage',
-          rotateX: -accelerometer.x + 'deg',
-          rotateZ: -accelerometer.z + 'deg',
-          rotateY: -accelerometer.y + 'deg',
-          duration: 0
-        })
-        anime({
-          targets: '.divider',
-          width: accelerometer.x + '%',
-          duration: 0
-        })
-      })
-      accelerometer.start()
-    }
-  }
-
-  useEffect(() => {
-    axel()
-  }, [])
-
   let skew = e => {
     anime({
       targets: '.starterImage',
