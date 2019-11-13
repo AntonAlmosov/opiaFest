@@ -89,3 +89,61 @@
     }
   }
 }
+
+@media (max-width: 739px) {
+  .partners {
+    position: relative;
+
+    .partnersWrapper {
+      width: 300px;
+      margin: 20px auto 0;
+      display: flex;
+      justify-content: center;
+      flex-flow: wrap;
+
+      .partner {
+        height: 60px;
+      }
+
+      .zil {
+        width: calc(100% / 2 - 10px);
+        background-image: url(asset-path('zil.png'));
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .gi {
+        width: calc(100% / 2 - 10px);
+        background-image: url(asset-path('gi.png'));
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .am {
+        width: calc(100% / 2 - 10px);
+        background-image: url(asset-path('am.png'));
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .ic {
+        width: calc(100% / 2 - 10px);
+        background-image: url(asset-path('ic.png'));
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .cf {
+        width: calc(100% / 2 - 10px);
+        background-image: url(asset-path('cf.png'));
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}

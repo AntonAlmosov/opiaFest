@@ -110,3 +110,62 @@
     }
   }
 }
+
+@media (max-width: 739px) {
+  .feedback {
+
+    .form {
+      width: 300px;
+      margin: 20px auto 0;
+      display: flex;
+
+      input {
+        border: 3px solid black;
+        outline: 0;
+        padding: 0 0 0 12px;
+        display: flex;
+        align-items: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 142.7%;
+        width: 207px;
+        height: 50px;
+        box-sizing: border-box;
+      }
+
+      .send {
+        background-color: black;
+        width: 93px;
+        height: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 142.7%;
+        cursor: pointer;
+      }
+    }
+
+    .responces {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 142.7%;
+      width: 300px;
+      margin: 20px auto;
+      height: 40px;
+
+      .email {
+        color: red;
+      }
+    }
+  }
+
+}

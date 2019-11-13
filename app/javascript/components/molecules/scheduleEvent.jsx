@@ -8,7 +8,7 @@ export default ({ event }) => {
     if (window.innerWidth >= 1130) {
       console.log(window.innerWidth)
       expand(e, 490)
-    } else if (window.innerWidth <= 1129 && window.innerWidth >= 730) {
+    } else if (window.innerWidth <= 1129) {
       console.log(window.innerWidth)
       expand(e, 348)
     }
@@ -17,8 +17,10 @@ export default ({ event }) => {
     if (window.innerWidth >= 1129) {
       console.log(window.innerWidth)
       reset(e, 80)
-    } else if (window.innerWidth <= 1129 && window.innerWidth >= 730) {
+    } else if (window.innerWidth <= 1129 && window.innerWidth >= 740) {
       reset(e, 52)
+    } else if (window.innerWidth <= 739) {
+      reset(e, 46)
     }
   }
 

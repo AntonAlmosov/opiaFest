@@ -37,3 +37,23 @@
     }
   }
 }
+
+@media (max-width: 739px) {
+  .descriptionWrapper {
+    width: 100vw;
+
+    .description {
+      width: 300px;
+      margin: 40px auto 40px;
+
+      p {
+        width: 300px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 142.7%;
+      }
+    }
+  }
+}

@@ -28,3 +28,21 @@
     }
   }
 }
+
+@media (max-width: 739px) {
+  .section {
+    width: 100vw;
+    margin: 40px auto;
+
+    h1 {
+      width: 300px;
+      margin: 0 auto;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      text-align: left;
+    }
+  }
+
+}

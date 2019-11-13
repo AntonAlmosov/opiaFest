@@ -123,3 +123,66 @@
     }
   }
 }
+
+@media (max-width: 739px) {
+  .usersWrapper {
+    width: 300px;
+    margin: 0px auto 0;
+    flex-flow: column;
+
+    .cardsWrapper {
+      width: 300px;
+      margin: 10px auto 0;
+      display: flex;
+      flex-flow: column;
+
+      .card {
+        width: 300px;
+        height: 160px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .avatar {
+          width: 145px;
+          height: 160px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .info {
+          display: flex;
+          flex-flow: column;
+          width: 145px;
+
+          .name {
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+          }
+
+          .teamRole {
+            margin-top: 1px;
+            font-family: Montserrat;
+            font-style: italic;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+          }
+
+          .desc {
+            margin-top: 12px;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+  }
+
+}
