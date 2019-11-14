@@ -18,7 +18,7 @@ export default () => {
 
   return (
     <div className="usersWrapper section">
-      <h1>Комманда</h1>
+      <h1>Команда</h1>
       <div className="cardsWrapper">
         {users.map(value => {
           return (
