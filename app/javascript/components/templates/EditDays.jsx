@@ -291,7 +291,7 @@ export default () => {
                       onBlur={e =>
                         handleForm(e.target.value, 'regLink', event.event.id)
                       }
-                      defaultValue={event.event.link}
+                      defaultValue={event.event.regLink}
                       className="regLink link"
                       placeholder="Ссылка на регистрацию"
                     />

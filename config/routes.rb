@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
     root :to => 'fest#index'
-  
+ 
     resources :fest do
       collection do
         get :editData
